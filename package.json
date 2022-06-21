@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "gh-build": "ng build --base-href /Subscriber-Clicker/dist/subscribe-clicker/"
   },
   "private": true,
   "dependencies": {

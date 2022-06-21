@@ -1,7 +1,7 @@
 <div id="app-container">
   <h1>Subscribe Clicker</h1>
   <h3>Subscribers: {{score}}</h3>
-  <img src="../assets/subscribe.png" (click)="incrementScore();" alt="">
+  <img src="./assets/subscribe.png" (click)="incrementScore();" alt="">
   <div id="items">
     <button *ngFor="let item of items" (click)="buyItem(item);">
       Buy: {{ item.name }}
