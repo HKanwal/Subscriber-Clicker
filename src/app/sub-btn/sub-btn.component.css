@@ -1,0 +1,44 @@
+button {
+    --bg-color: #df2e24;
+
+    padding: 0px;
+    width: 400px;
+    height: 100px;
+    background-color: var(--bg-color);
+
+    border-radius: 15px;
+    border: none;
+
+    text-align: left;
+    font-size: 350%;
+    color: white;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#logo {
+    width: 100px;
+    height: 74px;
+    background-color: white;
+    margin: 13px;
+    border-radius: 15px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#triangle {
+    width: 0px;
+    height: 0px;
+    /* Equalateral triangle: border-left = 0.866 * (border-top + border-bottom) */
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 34.64px solid var(--bg-color);
+}
+
+button:active {
+    --bg-color: #c82820;
+}
