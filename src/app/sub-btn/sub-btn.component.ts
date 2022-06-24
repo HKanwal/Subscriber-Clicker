@@ -5,11 +5,6 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './sub-btn.component.html',
   styleUrls: ['./sub-btn.component.css']
 })
-export class SubBtnComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class SubBtnComponent {
 
 }

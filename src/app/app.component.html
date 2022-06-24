@@ -1,7 +1,7 @@
 <main>
   <h1>Subscribe Clicker</h1>
   <h3>Subscribers: {{score}}</h3>
-  <sub-btn></sub-btn>
+  <sub-btn (click)="incrementScore()"></sub-btn>
   <div id="items">
     <button *ngFor="let item of items" (click)="buyItem(item);">
       Buy: {{ item.name }}
