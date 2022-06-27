@@ -12,6 +12,8 @@ button {
     text-align: left;
     font-size: 350%;
     color: white;
+
+    box-shadow: 0 9px #891c16;
 }
 
 button:hover {
@@ -41,4 +43,6 @@ button:hover {
 
 button:active {
     --bg-color: #c82820;
+    transform: translateY(4px);
+    box-shadow: 0 5px #891c16;
 }
