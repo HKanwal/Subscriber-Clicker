@@ -16,4 +16,10 @@ export class SubBtnComponent {
     if (this.audio)
       this.audio.play();
   }
+
+
+
+  handleClick() {
+    this.playSound();
+  }
 }

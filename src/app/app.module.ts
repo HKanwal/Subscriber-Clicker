@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SubBtnComponent } from './sub-btn/sub-btn.component';
+import { BubbleComponent } from './bubble/bubble.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SubBtnComponent
+    SubBtnComponent,
+    BubbleComponent
   ],
   imports: [
     BrowserModule,
