@@ -1,18 +1,20 @@
 span {
     position: absolute;
-    background-color: red;
-    animation-duration: 4s;
-    animation-name: float;
+    font-size: 0.35em;
+    color: black;
+    animation-duration: 2s;
+    animation-name: float-fadeout;
+    transform: translateY(var(--transY));
 }
 
-@keyframes float {
+@keyframes float-fadeout {
     from {
         transform: translateY(0px);
-        visibility: visible;
+        opacity: 1;
     }
 
     to {
         transform: translateY(-200px);
-        visibility: hidden;
+        opacity: 0;
     }
 }

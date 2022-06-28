@@ -23,9 +23,12 @@ export class SubBtnComponent {
   handleClick(e: MouseEvent) {
     if (this.bubbleContainer) {
       let bubble = this.bubbleContainer.createComponent(BubbleComponent);
-      bubble.instance.x = e.clientX;
-      bubble.instance.y = e.clientY;
+      bubble.instance.x = e.offsetX;
+      bubble.instance.y = e.offsetY;
       this.bubbleRefs.push(bubble);
+      // setTimeout(() => {
+      //   bubble.destroy();
+      // }, 2000);
     }
     this.playSound();
   }

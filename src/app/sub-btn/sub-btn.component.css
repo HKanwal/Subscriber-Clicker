@@ -1,6 +1,7 @@
 button {
     --bg-color: #df2e24;
 
+    position: relative;
     padding: 0px;
     width: 400px;
     height: 100px;
@@ -43,6 +44,7 @@ button:hover {
 
 button:active {
     --bg-color: #c82820;
+    --transY: -4px;
     transform: translateY(4px);
     box-shadow: 0 5px #891c16;
 }
