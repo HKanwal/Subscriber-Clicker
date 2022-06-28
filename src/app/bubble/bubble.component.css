@@ -1,3 +1,18 @@
-/* span {
-    position: ;
-} */
+span {
+    position: absolute;
+    background-color: red;
+    animation-duration: 4s;
+    animation-name: float;
+}
+
+@keyframes float {
+    from {
+        transform: translateY(0px);
+        visibility: visible;
+    }
+
+    to {
+        transform: translateY(-200px);
+        visibility: hidden;
+    }
+}

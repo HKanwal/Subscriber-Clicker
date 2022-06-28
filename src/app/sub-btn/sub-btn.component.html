@@ -1,7 +1,8 @@
-<button (click)="handleClick()">
+<button (click)="handleClick($event)">
     <audio src="./assets/button_click.mp3"></audio>
     <div id="logo">
         <div id="triangle"></div>
     </div>
     <span>Subscribe</span>
+    <template #bubbleContainer></template>
 </button>
