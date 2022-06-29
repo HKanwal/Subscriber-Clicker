@@ -1,10 +1,9 @@
 span {
     position: absolute;
-    font-size: 0.35em;
     color: black;
     animation-duration: 2s;
     animation-name: float-fadeout;
-    transform: translateY(var(--transY));
+    user-select: none;
 }
 
 @keyframes float-fadeout {

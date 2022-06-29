@@ -1,5 +1,4 @@
-import { Component, ComponentRef, OnInit, ViewChild, ViewContainerRef } from '@angular/core';
-import { BubbleComponent } from '../bubble/bubble.component';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'sub-btn',
@@ -8,8 +7,6 @@ import { BubbleComponent } from '../bubble/bubble.component';
 })
 export class SubBtnComponent {
   audio: HTMLAudioElement | null = null;
-  @ViewChild("bubbleContainer", { read: ViewContainerRef }) bubbleContainer?: ViewContainerRef;
-  bubbleRefs: ComponentRef<BubbleComponent>[] = [];
 
   ngOnInit() {
     this.audio = document.querySelector("audio") || null;
@@ -18,18 +15,5 @@ export class SubBtnComponent {
   playSound() {
     if (this.audio)
       this.audio.play();
-  }
-
-  handleClick(e: MouseEvent) {
-    if (this.bubbleContainer) {
-      let bubble = this.bubbleContainer.createComponent(BubbleComponent);
-      bubble.instance.x = e.offsetX;
-      bubble.instance.y = e.offsetY;
-      this.bubbleRefs.push(bubble);
-      // setTimeout(() => {
-      //   bubble.destroy();
-      // }, 2000);
-    }
-    this.playSound();
   }
 }

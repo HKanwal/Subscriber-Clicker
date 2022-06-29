@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild, ViewContainerRef } from '@angular/core';
+import { BubbleComponent } from './bubble/bubble.component';
 
 class Item {
   name: string;
@@ -22,6 +23,7 @@ export class AppComponent {
   items: Item[] = [];
   modifier: number = 0;
   score = 0;
+  @ViewChild("bubbles", { read: ViewContainerRef }) bubbles?: ViewContainerRef;
 
   constructor() {
     this.items.push(new Item("Russian Bots", 25, 1));
@@ -52,6 +54,18 @@ export class AppComponent {
     if (this.score >= item.cost) {
       this.decreaseScore(item.cost);
       this.modifier += item.cps;
+    }
+  }
+
+  handleButtonClick(e: MouseEvent) {
+    this.incrementScore();
+    if (this.bubbles) {
+      let bubble = this.bubbles.createComponent(BubbleComponent);
+      bubble.instance.x = e.clientX;
+      bubble.instance.y = e.clientY - 20;
+      setTimeout(() => {
+        bubble.destroy();
+      }, 2000);
     }
   }
 }
